@@ -30,6 +30,8 @@ namespace UniverseLib.UI.Panels
         public GameObject ContentRoot { get; protected set; }
 
         public GameObject TitleBar { get; private set; }
+        
+        public virtual bool AlwaysOnTop { get; }
 
         public PanelBase(UIBase owner)
         {

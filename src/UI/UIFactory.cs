@@ -628,13 +628,13 @@ namespace UniverseLib.UI
             arrowRect.anchoredPosition = new Vector2(-15f, 0f);
 
             Image itemBgImage = itemBgObj.AddComponent<Image>();
-            itemBgImage.color = new Color(0.25f, 0.35f, 0.25f, 1.0f);
+            itemBgImage.color = UIPalette.Gray;
 
             Toggle itemToggle = itemObj.AddComponent<Toggle>();
             itemToggle.targetGraphic = itemBgImage;
             itemToggle.isOn = true;
             RuntimeHelper.Instance.Internal_SetColorBlock(itemToggle,
-                new Color(0.35f, 0.35f, 0.35f, 1.0f), new Color(0.25f, 0.55f, 0.25f, 1.0f));
+                new Color(0.35f, 0.35f, 0.35f, 1.0f), UIPalette.Success);
 
             itemToggle.onValueChanged.AddListener((bool val) => { itemToggle.OnDeselect(null); });
             Image templateImage = templateObj.AddComponent<Image>();

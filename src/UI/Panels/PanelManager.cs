@@ -163,6 +163,7 @@ namespace UniverseLib.UI.Panels
         // invoked from parent UIBase.Update
         internal protected virtual void Update()
         {
+            if (panelInstances.Any(p => p is {Enabled: true, AlwaysOnTop: true})) return;
             if (!ResizePrompting && ShouldUpdateFocus)
                 UpdateFocus();
 
